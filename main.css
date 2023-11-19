@@ -1,0 +1,182 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.first-part {
+  background-image: url('backgound4.jpg'); /* Replace 'your-image.jpg' with the path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  color: white; /* Set text color to be visible on the background image */
+}
+
+header {
+  background-color: transparent;
+  color: black;
+  text-align: center;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 18%;
+  padding-right: 18%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-left img {
+  max-width: 100%; /* Ensure the logo doesn't exceed its container */
+  margin-right: 10px; /* Add some spacing between the logo and text */
+  margin: 0;
+}
+
+.header-left span {
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 1.5em;
+}
+
+.company-name {
+  font-size: 1.2em; /* Adjust the font size as needed */
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+.header-right nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.header-right nav ul a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.8em;
+}
+
+.header-right li {
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .header-right {
+    position: relative;
+    flex-direction: column;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .header-right nav {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the header */
+    left: -70%; /* Center the nav horizontally */
+    width: auto;
+    background-color: #fff; /* Add a background color */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a card-like effect */
+  }
+
+  .header-right nav.show {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .header-right nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+  }
+  
+  .header-right li {
+    margin-right: 0; /* Remove the right margin */
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+  }
+  
+  .header-right li:last-child {
+    margin-bottom: 0; /* Remove margin for the last item */
+  }
+  
+  .header-right.show li:last-child {
+    margin-bottom: 0; /* Remove margin for the last item */
+  }
+
+  .bar {
+    transition: 0.4s;
+  }
+
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-6.3px, 6.3px);
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform:rotate(-135deg) translate(6.3px, 6.3px);
+  }
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+section#introduction {
+  padding-top: 20%;
+  padding-left: 45%;
+  text-align: center;
+  color: black;
+}
+
+section#introduction h2 {
+  margin: 0;
+  font-size: 50px;
+}
+
+section#introduction p {
+  margin: 0;
+}
+
+section {
+  padding: 2em;
+}
+
+
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
