@@ -5,45 +5,59 @@ body {
   box-sizing: border-box;
 }
 
-.first-part {
-  background-image: url('backgound4.jpg'); /* Replace 'your-image.jpg' with the path to your image */
+.first-section {
+  position: relative;
+  background-image: url('backgound4.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100vh;
-  color: white; /* Set text color to be visible on the background image */
+  height: 85vh;
+  color: white;
 }
 
+.first-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
 header {
-  background-color: transparent;
+  background-color: white;
   color: black;
   text-align: center;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  padding-left: 18%;
-  padding-right: 18%;
+  padding-left: 15%;
+  padding-right: 15%;
+  margin: -12px 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  border-bottom: 13.5px solid rgb(84, 117, 165);
+  box-sizing: border-box
 }
 
 .header-left {
   display: flex;
   align-items: center;
+  margin-bottom: -10px;
 }
 
 .header-left img {
   max-width: 100%; /* Ensure the logo doesn't exceed its container */
-  margin-right: 10px; /* Add some spacing between the logo and text */
   margin: 0;
 }
 
 .header-left span {
-  font-family: 'Open Sans', sans-serif;
-  font-style: italic;
-  font-weight: 800;
-  font-size: 1.5em;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 300;
+  background: linear-gradient(to right, rgba(14,62,129,255) 64%, red 36%);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 2em;
 }
 
 .company-name {
@@ -63,21 +77,27 @@ header {
   background-color: black;
   margin: 6px 0;
 }
-
+.header-right {
+  margin-top: 60px;
+}
 .header-right nav ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding-bottom: 10px;
   display: flex;
 }
 
 .header-right nav ul a {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 0.8em;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.0em;
+}
+
+.header-right nav a:hover {
+  color: rgb(84, 117, 165); /* Change the color to your desired blue shade */
 }
 
 .header-right li {
-  margin-right: 20px;
+  margin-right: 65px;
 }
 
 @media only screen and (max-width: 1200px) {
