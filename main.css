@@ -3,31 +3,20 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  z-index: 1;
 }
 
 .first-section {
   position: relative;
-  background-image: url('backgound4.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   width: 100%;
   height: 85vh;
   color: white;
 }
 
-.first-section::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 
 header {
+  position: fixed;
+  width: 100%;
   background-color: white;
   color: black;
   text-align: center;
@@ -36,8 +25,9 @@ header {
   margin: -12px 0;
   display: flex;
   justify-content: space-between;
-  border-bottom: 13.5px solid rgb(84, 117, 165);
-  box-sizing: border-box
+  border-bottom: 5px solid rgb(84, 117, 165);
+  box-sizing: border-box;
+  z-index: 2;
 }
 
 .header-left {
