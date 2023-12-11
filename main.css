@@ -7,43 +7,27 @@ body {
 
 .first-section {
   position: relative;
-  background-image: url('backgound4.png');
+  background-image: url('Leonardo_Diffusion_XL_I_want_a_image_with_terminal_fresh_wate_1\ \(1\).jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 85vh;
+  width: 100vw;
+  height: 100vh;
   color: white;
 }
 
-.first-section::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-
 header {
-  background-color: white;
-  color: black;
-  text-align: center;
-  padding-left: 15%;
-  padding-right: 15%;
-  margin: -12px 0;
   display: flex;
-  justify-content: space-between;
-  border-bottom: 13.5px solid rgb(84, 117, 165);
-  box-sizing: border-box
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
 }
 
 .header-left {
   display: flex;
   align-items: center;
-  margin-bottom: -10px;
+  margin-right: 13em;
+  margin-left: 4em;
 }
 
 .header-left img {
@@ -53,15 +37,10 @@ header {
 
 .header-left span {
   font-family: 'Dancing Script', cursive;
-  font-weight: 300;
-  background: linear-gradient(to right, rgba(14,62,129,255) 64%, red 36%);
+  background: black;
   -webkit-background-clip: text;
   color: transparent;
-  font-size: 2em;
-}
-
-.company-name {
-  font-size: 1.2em; /* Adjust the font size as needed */
+  font-size: 1.5em;
 }
 
 .menu-toggle {
@@ -77,8 +56,12 @@ header {
   background-color: black;
   margin: 6px 0;
 }
+
 .header-right {
-  margin-top: 60px;
+  display: flex;
+  text-align: center;
+  padding-top: 0.5em;
+  margin-left: 3em;
 }
 .header-right nav ul {
   list-style-type: none;
@@ -116,7 +99,6 @@ header {
     top: 100%; /* Position below the header */
     left: -70%; /* Center the nav horizontally */
     width: auto;
-    background-color: #fff; /* Add a background color */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a card-like effect */
   }
 
