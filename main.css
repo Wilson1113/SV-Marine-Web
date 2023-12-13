@@ -3,25 +3,29 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  z-index: 1;
 }
 
 .first-section {
   position: relative;
+  overflow: hidden;
   background-image: url('Leonardo_Diffusion_XL_I_want_a_image_with_terminal_fresh_wate_2.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
-  color: white;
+  --mask:
+    radial-gradient(147.57px at 50% calc(100% - 204.00px),#000 99%,#0000 101%) calc(50% - 160px) 0/320px 100%,
+    radial-gradient(147.57px at 50% calc(100% + 124.00px),#0000 99%,#000 101%) 50% calc(100% - 80px)/320px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+          
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
 }
 
 .header-left {
@@ -174,46 +178,118 @@ section#introduction p {
   margin: 0;
   font-weight: 100;
   font-size: 1.1em;
+  color: rgb(35, 38, 38);
 }
 
 
 
 section#about {
   width: 100vw;
-  height: 80vh;
-  background-color: #A7D8E9;
+  height: 70vh;
   display: flex;
   align-items: center;
+  font-family: "Kalnia", sans-serif;
 }
 
-section#about div {
-  width: 48%;
-  height: 100%;
-}
-
-
-section#about .image {
+section#about .topic {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  margin-left: 6%;
+  font-size: 3.3em;
+  color: #137896;
 }
-
-section#about .image img {
-  width: 80%;
-  height: auto;
-  border-radius: 50%;
-}
-
 
 section#about .paragraph {
   background-color: rgba(255, 182, 182, 0.597);
   display: flex;
-
   align-items: center;
+  width: 100%;
+  margin-left: 6%;
+  padding: 5% 4% 5% 0%;
+  border-radius: 10px;
 }
 
-section {
-  padding: 2em;
+section#about .paragraph p{
+  padding-left: 7%;
+  color: #575d5f;
+}
+
+section#services {
+  background-color: rgb(240, 240, 240);
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Kalnia", sans-serif;
+  --mask:
+    radial-gradient(147.57px at 50% 204.00px,#000 99%,#0000 101%) calc(50% - 160px) 0/320px 100%,
+    radial-gradient(147.57px at 50% -124px,#0000 99%,#000 101%) 50% 80px/320px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+
+section#services .content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 7%;
+}
+
+section#services .content h1{
+  color: #137896;
+  margin-bottom: 0.5%;
+  font-size: 1.3em;
+}
+
+section#services .content h2{
+  font-size: 2em;
+  margin-top: 0;
+}
+
+#products{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+  width: 40%;
+}
+
+#products div{
+  width: 45%;
+  height: 90%;
+  text-align: center;
+  box-shadow: 0px 0px 9px 1px rgba(251, 134, 134, 0.4);
+  margin-top: 1.5%;
+}
+
+#products div h3{
+  color: #137896;
+  font-size: 1.4em;
+}
+
+#products div p{
+  font-size: 0.95em;
+  color: rgb(87, 93, 95);
+}
+
+#products div img[src="drop-humidity-icon.png"]{
+  width: 33%;
+  height: auto;
+  text-align: center; 
+  margin-top: 20%;
+}
+
+#products div img[src="ship-icon.png"]{
+  width: 40%;
+  height: auto;
+  text-align: center;
+  border-radius: 40%;
+  margin-top: 20%;
 }
 
 
