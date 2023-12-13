@@ -3,217 +3,50 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  z-index: 1;
 }
 
 .first-section {
   position: relative;
-  background-image: url('Leonardo_Diffusion_XL_I_want_a_image_with_terminal_fresh_wate_2.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
   color: white;
+  background-image: url('Leonardo_Diffusion_XL_I_want_a_image_with_terminal_fresh_wate_1\ \(1\).jpg');
+  background-size: cover;
+  background-position: center;    
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
 
-.header-left {
-  display: flex;
-  align-items: center;
-  margin-right: 28em;
-  margin-left: 4em;
-}
-
-.header-left img {
-  max-width: 100%; /* Ensure the logo doesn't exceed its container */
-  margin: 0;
-}
-
-.header-left span {
-  font-family: 'Kalnia', cursive;
-  background: black;
-  -webkit-background-clip: text;
-  color: transparent;
-  font-size: 1.5em;
-}
-
-.menu-toggle {
-  display: none;
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: black;
-  margin: 6px 0;
-}
-
-.header-right {
-  display: flex;
-  text-align: center;
-  padding-top: 0.5em;
-  margin-left: 3em;
-}
-.header-right nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding-bottom: 10px;
-  display: flex;
-}
-
-.header-right nav ul a {
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.9em;
-  font-weight: 500;
-}
-
-.header-right nav a:hover {
-  color: rgb(84, 117, 165); /* Change the color to your desired blue shade */
-}
-
-.header-right li {
-  margin-right: 45px;
-}
-
-@media only screen and (max-width: 1200px) {
-  .header-right {
-    position: relative;
-    flex-direction: column;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .header-right nav {
-    display: none;
-    position: absolute;
-    top: 100%; /* Position below the header */
-    left: -70%; /* Center the nav horizontally */
-    width: auto;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a card-like effect */
-  }
-
-  .header-right nav.show {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  
-  .header-right nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center;
-  }
-  
-  .header-right li {
-    margin-right: 0; /* Remove the right margin */
-    margin-bottom: 10px; /* Add bottom margin for spacing */
-  }
-  
-  .header-right li:last-child {
-    margin-bottom: 0; /* Remove margin for the last item */
-  }
-  
-  .header-right.show li:last-child {
-    margin-bottom: 0; /* Remove margin for the last item */
-  }
-
-  .bar {
-    transition: 0.4s;
-  }
-
-  .menu-toggle.active .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-6.3px, 6.3px);
-  }
-
-  .menu-toggle.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-toggle.active .bar:nth-child(3) {
-    transform:rotate(-135deg) translate(6.3px, 6.3px);
-  }
-}
-
-nav a {
-  text-decoration: none;
-  color: black;
+.box {
+  --mask:
+    radial-gradient(88.68px at 50% calc(100% - 121.00px),#000 99%,#0000 101%) calc(50% - 88px) 0/176px 100%,
+    radial-gradient(88.68px at 50% calc(100% + 77.00px),#0000 99%,#000 101%) 50% calc(100% - 44px)/176px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
 }
 
 section#introduction {
-  margin-right: 56%;
-  margin-top: 7%;
-  padding: 5% 4% 5% 0%;
-  text-align: right;
+  padding-top: 20%;
+  padding-left: 45%;
+  text-align: center;
   color: black;
-  font-family: "Kalnia", sans-serif;
-  background-color: rgba(251, 134, 134, 0.4);
 }
 
 section#introduction h2 {
-  font-weight: 700;
-  font-size: 3.4em;
   margin: 0;
+  font-size: 50px;
 }
 
 section#introduction p {
   margin: 0;
-  font-weight: 100;
-  font-size: 1.1em;
-}
-
-
-
-section#about {
-  width: 100vw;
-  height: 80vh;
-  background-color: #A7D8E9;
-  display: flex;
-  align-items: center;
-}
-
-section#about div {
-  width: 48%;
-  height: 100%;
-}
-
-
-section#about .image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-section#about .image img {
-  width: 80%;
-  height: auto;
-  border-radius: 50%;
-}
-
-
-section#about .paragraph {
-  background-color: rgba(255, 182, 182, 0.597);
-  display: flex;
-
-  align-items: center;
 }
 
 section {
   padding: 2em;
 }
+
 
 
 footer {
