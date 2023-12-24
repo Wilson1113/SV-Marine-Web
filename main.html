@@ -14,7 +14,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@500&family=Open+Sans:wght@400;700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@500&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <link href="main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -42,7 +42,7 @@
                 </nav>
             </div>
         </header>
-        <section id="introduction">
+        <section id="introduction" class="hidden">
             <h2>SV Maritime Sdn Bhd</h2>
             <p>We operate and provides offshore support vessel from various exploration,
             development and production activities within the offshore oil
@@ -85,17 +85,48 @@
     </section>
 
     <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Reach out to us for your fresh water needs:</p>
-        <address>
-            Email: <a href="mailto:info@yourwatersupply.com">info@yourwatersupply.com</a><br>
-            Phone: (123) 456-7890
-        </address>
+        <button>Contact Us</button>
+        <h3>Reach out to us for your fresh water needs:</h3>
     </section>
 
-    <!-- <footer>
-        <p>&copy; 2023 Your Fresh Water Supply. All rights reserved.</p>
-    </footer> -->
+    <section id="bottom">
+        <div class="block"> 
+            <div class="contact">
+                <h3>SV MARITIME SDN BHD</h3>
+                <p>
+                    Address: <br>893, Jalan Meria 80, Indahpurah<br>
+                    
+                    <br>
+                    Email: <br><a href="mailto:info@yourwatersupply.com">info@yourwatersupply.com</a><br>
+                    <br>
+                    Contact: <br>(123) 456-7890
+
+                </p>
+            </div>
+            <div class="navigation">
+                <h3>LINK</h3>
+                <nav class="nav-links">
+                    <ul>
+                        <li><a href="#introduction">Home</a></li>
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#services">Servies</a></li>
+                        <li><a href="#ships">Ships</a></li>
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#contact">Contact us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="logo">
+                <img src="logo.png" alt="SV MARINE">
+            </div>
+        </div>
+       
+        <footer>
+            <p>&copy; 2023 SV MARITIME. All rights reserved.</p>
+        </footer>
+    </section>
+
+    
 
     <script>
         function toggleMenu() {
@@ -105,6 +136,28 @@
             navLinks.classList.toggle('show');
             menuToggle.classList.toggle('active');
         }
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to handle the intersection observer callback
+            function handleIntersection(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }
+
+            // Set up an Intersection Observer to watch for elements with the "hidden" class
+            const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+
+            // Get all elements with the "hidden" class
+            const hiddenElements = document.querySelectorAll('.hidden');
+
+            // Observe each hidden element
+            hiddenElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
     </script>
 </body>
 </html>
